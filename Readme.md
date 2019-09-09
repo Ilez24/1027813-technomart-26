@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Илез Банхаев](https://up.htmlacademy.ru/htmlcss/26/user/1027813).
-* Наставник: `Александр Панасюк`(https://up.htmlacademy.ru/htmlcss/26/user/sasha_oldsport).
+* Наставник: [Александр Панасюк](https://htmlacademy.ru/profile/sasha_oldsport).
 
 ---
 
