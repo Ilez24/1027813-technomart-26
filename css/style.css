@@ -2,7 +2,7 @@ body {
     min-width: 960px;
     margin: 0;
     padding: 0;
-    background-color: #fff
+    background-color: #fff;
 }
 
 p,
@@ -13,31 +13,56 @@ h1,
 input,
 figure {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 figure {
-    line-height: 0
+    line-height: 0;
 }
 
 ul {
-    list-style: none
+    list-style: none;
 }
 
 label {
     display: block;
-    cursor: pointer
+    cursor: pointer;
 }
 
-.clearfix::after {
+.clear::after {
     content: "";
     display: table;
-    clear: both
+    clear: both;
 }
 
 .container {
     width: 940px;
-    margin: 0 auto
+    margin: 0 auto;
+}
+
+
+/*header*/
+
+.header-main {
+    margin-bottom: 59px;
+}
+
+.header-string {
+    box-sizing: border-box;
+    min-height: 42px;
+    margin-bottom: 47px;
+    font-size: 0;
+    background-color: #293449;
+}
+
+.header-string a,
+.header-string form,
+.header-search label,
+.header-string,
+.header-search {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .header-logo {
@@ -47,15 +72,59 @@ label {
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
-    text-decoration: none
+    text-decoration: none;
+    width: 220px;
+    background-color: #ee3643;
+    box-shadow: #ca2c37 0 5px 0 0;
+    padding: 8px 50px 8px 52px;
+}
+
+.header-logo:hover {
+    background-color: #ca2c37;
+    box-shadow: #9a212a 0 5px 0 0;
+}
+
+.header-logo:active {
+    background-color: #ba2732;
+    box-shadow: #8e1e26 0 5px 0 0;
 }
 
 .header-search input {
     font-family: "Cuprum", sans-serif, Arial;
+    box-sizing: border-box;
+    width: 270px;
+    height: 42px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 49px;
+    background-color: #293449;
     font-size: 17px;
     line-height: 18px;
     font-weight: 400;
-    color: #000
+    color: #000;
+}
+
+.header-search {
+    position: relative;
+}
+
+.header-search label::before {
+    position: absolute;
+    top: 12px;
+    left: -252px;
+    font-size: 17px;
+    font-family: "symbols-technomart";
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    content: "\1f50d";
+    cursor: pointer;
+    color: #6a7180
 }
 
 .header-search input::-webkit-input-placeholder {
@@ -63,7 +132,7 @@ label {
     font-size: 17px;
     line-height: 18px;
     font-weight: 400;
-    color: #fff
+    color: #fff;
 }
 
 .header-search input:focus::-webkit-input-placeholder {
@@ -71,7 +140,11 @@ label {
     font-size: 17px;
     line-height: 18px;
     font-weight: 400;
-    color: #000
+    color: #000;
+}
+
+.header-search input:focus {
+    background-color: #fff;
 }
 
 .header-basket,
@@ -82,16 +155,105 @@ label {
     line-height: 18px;
     font-weight: 400;
     color: #fff;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .header-basket:active,
 .header-bookmark:active {
-    color: rgba(255, 255, 255, .6)
+    color: rgba(255, 255, 255, .6);
 }
 
 .header-order:active {
-    color: rgba(255, 255, 255, .5)
+    color: rgba(255, 255, 255, .5);
+}
+
+.header-bookmark,
+.header-basket {
+    position: relative;
+    width: 150px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 44px;
+}
+
+.header-bookmark::before {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    font-size: 17px;
+    font-family: "symbols-technomart";
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    content: "\1f516";
+    cursor: pointer;
+    color: #6a7180
+}
+
+.header-bookmark:hover::before {
+    color: #fff
+}
+
+.header-bookmark:active::before {
+    color: #a2a5a9
+}
+
+.header-basket::before {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    font-size: 17px;
+    font-family: "symbols-technomart";
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    content: "\62";
+    cursor: pointer;
+    color: #6a7180
+}
+
+.header-basket:hover::before {
+    color: #fff
+}
+
+.header-basket:active::before {
+    color: #a2a5a9;
+}
+
+.header-basket,
+.header-basket-catalog:active {
+    background-color: #ba2732;
+}
+
+.header-basket:active,
+.header-bookmark:active {
+    background-color: #161d29;
+}
+
+.header-order {
+    width: 150px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    background-color: #63a63e
+}
+
+.header-order:hover {
+    background-color: #5fbb2d
+}
+
+.header-order:active {
+    background-color: #518534
 }
 
 .i-shop-text {
@@ -100,7 +262,69 @@ label {
     line-height: 23px;
     font-weight: 400;
     color: #ee3643;
-    font-style: italic
+    font-style: italic;
+    float: left;
+    width: 200px;
+    white-space: pre-line;
+    margin-right: 70px;
+    padding-left: 50px
+}
+
+.internet-shop {
+    margin-bottom: 37px;
+}
+
+.header-contacts {
+    float: left;
+    width: 270px
+}
+
+.header-mobile {
+    position: relative;
+    margin-bottom: 5px;
+    border: 3px solid #fff;
+    padding: 9px 42px 9px 70px
+}
+
+.header-mobile::before {
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    font-size: 18px;
+    font-family: "symbols-technomart";
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    content: "\1f4de";
+    color: #b7bfc8
+}
+
+.header-address {
+    font-family: "Cuprum", sans-serif, Arial;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #32425c;
+    text-align: center
+}
+
+.in-and-registration {
+    float: right;
+    width: 300px;
+    font-size: 0;
+}
+
+.in-and-registration a:last-child {
+    margin-right: 0
+}
+
+.user-connected {
+    width: 285px;
 }
 
 .in,
@@ -111,33 +335,25 @@ label {
     font-size: 21px;
     line-height: 21px;
     font-weight: 400;
-    color: #e9292a
-}
-
-.header-address {
-    font-family: "Cuprum", sans-serif, Arial;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #32425c
+    color: #e9292a;
 }
 
 .in,
 .user,
 .registration {
     color: #000;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .in:hover,
 .registration:hover {
-    color: #ee3643
+    color: #ee3643;
 }
 
 .in:active,
 .user:active,
 .registration:active {
-    color: rgba(0, 0, 0, .3)
+    color: rgba(0, 0, 0, .3);
 }
 
 .header-menu a {
@@ -146,5 +362,552 @@ label {
     line-height: 17px;
     font-weight: 400;
     text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    padding: 18px 31px
+}
+
+.header-menu {
+    padding-left: 21px;
+    font-size: 0;
+    background-color: #32425c;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: #293449
+}
+
+.header-menu a:hover {
+    background-color: #293449
+}
+
+.header-menu a:active {
+    color: rgba(255, 255, 255, .5);
+    background-color: #293449
+}
+
+
+/*main*/
+
+.offer {
+    font-size: 0;
+    margin-bottom: 20px
+}
+
+.offer .offer-item {
+    display: inline-block;
+    margin-right: 20px
+}
+
+.offer .offer-item:nth-child(3n) {
+    margin-right: 0
+}
+
+.offer-item {
+    display: inline-block;
+    position: relative;
+    width: 277px;
+    min-height: 101px;
+    padding-top: 23px;
+    padding-left: 23px;
+    overflow: hidden
+}
+
+.container-material {
+    background-color: #f6b22d
+}
+
+.container-material::after {
+    position: absolute;
+    top: 31px;
+    left: 213px;
+    width: 45px;
+    height: 65px;
+    background: -39px -31px url(img/icon-1.svg) no-repeat;
+    content: "";
+}
+
+.new-item,
+.buy-bookmark,
+.new-item::before {
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 25px;
+    font-family: "Cuprum", sans-serif, Arial;
+    font-weight: 400;
+    text-align: center;
+    font-size: 17px;
+    line-height: 25px;
+    top: 10px;
+    right: -30px;
+    color: #fff;
+    content: "new";
+    background-color: #ee3643;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.material {
+    font-family: "Cuprum", sans-serif, Arial;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px
+}
+
+.taste {
+    font-family: "Cuprum", sans-serif, Arial;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 135px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 5px
+}
+
+.taste:hover {
+    background-color: rgba(0, 0, 0, .2)
+}
+
+.taste:active {
+    background-color: rgba(0, 0, 0, .3)
+}
+
+.tool {
+    background-color: #4aafde
+}
+
+.tool:after {
+    position: absolute;
+    top: 31px;
+    left: 198px;
+    width: 76px;
+    height: 65px;
+    background: -24px -153px url(/img/icon-2.svg) no-repeat;
+    content: ""
+}
+
+.container-technics {
+    background-color: #85d179
+}
+
+.container-technics::after {
+    position: absolute;
+    top: 31px;
+    left: 190px;
+    width: 80px;
+    height: 65px;
+    background: -22px -275px url(/img/icon-3.svg) no-repeat;
+    content: ""
+}
+
+.radio-container {
+    margin-bottom: 53px
+}
+
+.offer-slider-box {
+    position: relative;
+    float: left;
+    width: 620px;
+    min-height: 266px;
+    overflow: hidden
+}
+
+.offer-slider-drill,
+.offer-slider-perforator {
+    display: none
+}
+
+.offer-slider-drill+label:after,
+.offer-slider-perforator+label:after {
+    position: absolute;
+    top: 220px;
+    left: 300px;
+    display: inline-block;
+    vertical-align: top;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 1000;
+    content: ""
+}
+
+.offer-slider-perforator+label:after {
+    top: 220px;
+    left: 315px
+}
+
+.offer-slider-drill:checked+label:after,
+.offer-slider-perforator:checked+label:after {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: #ee3643
+}
+
+.offer-slider-drill:checked~.offer-slider-items {
+    transform: translate(0)
+}
+
+.offer-slider-perforator:checked~.offer-slider-items {
+    transform: translate(-620px)
+}
+
+.offer-slider-item .a-btn {
+    margin-left: 24px
+}
+
+.upper-strip {
+    padding-top: 22px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    margin-bottom: 100px;
+    background-color: rgba(0, 0, 0, .25)
+}
+
+.up-text {
+    margin-bottom: 1px
+}
+
+.offer-slider-items {
+    width: 200%;
+    transition: transform .8s ease
+}
+
+.offer-slider-item {
+    display: block;
+    float: left;
+    width: 620px;
+    min-height: 266px
+}
+
+.offer-slider-items {
+    transform: translate(0)
+}
+
+left-arrow:before {
+    position: absolute;
+    top: 115px;
+    left: 24px;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: "symbols-technomart";
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    content: "\3c";
+    color: #fff;
+    z-index: 1000
+}
+
+right-arrow:before {
+    position: absolute;
+    top: 115px;
+    right: 24px;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: "symbols-technomart";
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    content: "\3e";
+    color: #fff;
+    z-index: 1000
+}
+
+.left-arrow:hover:before,
+.right-arrow:hover:before {
+    color: #fb565a
+}
+
+.left-arrow:active:before,
+.right-arrow:active:before {
+    color: rgba(255, 255, 255, .6)
+}
+
+.down-text {
+    font-family: "Cuprum", sans-serif, Arial;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none
+}
+
+.a-btn {
+    font-family: "Cuprum", sans-serif, Arial;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none
+}
+
+.container-offer {
+    float: right;
+    margin-bottom: 20px
+}
+
+.popular {
+    padding-top: 28px;
+    padding-bottom: 25px;
+    margin-bottom: 18px;
+    background-color: #f7f3ec
+}
+
+.popular-text {
+    float: left;
+    width: 380px;
+    margin-left: 30px
+}
+
+.all-popular-product {
+    float: right;
+    width: 250px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-right: 24px;
+    background-color: #ee3643;
+    border-radius: 5px
+}
+
+.all-popular-product:hover {
+    background-color: #ca2c37
+}
+
+.all-popular-product:active {
+    background-color: #ba2732
+}
+
+.container-perforators {
+    font-size: 0
+}
+
+.catalog-popular .container-item-perforators:nth-child(3n) {
+    margin-right: 20px
+}
+
+.catalog-popular .container-item-perforators:nth-child(3n) {
+    margin-right: 0
+}
+
+.catalog-item-perforators {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 220px;
+    min-height: 318px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e5e5;
+    overflow: hidden
+}
+
+.catalog-item-perforator img {
+    width: 218px;
+    height: 169px;
+    margin-bottom: 12px
+}
+
+.buy-bookmark::before {
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 25px;
+    font-family: "Cuprum", sans-serif, Arial;
+    font-weight: 400;
+    text-align: center;
+    font-size: 17px;
+    line-height: 25px;
+    top: 10px;
+    right: -30px;
+    color: #fff;
+    content: "new";
+    background-color: #ee3643;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.buy-bookmark {
+    position: absolute;
+    display: none;
+    display: block;
+    top: 0;
+    width: 218px;
+    height: 124px;
+    padding-top: 45px;
+    background-color: #fff
+}
+
+.buy {
+    font-family: "Cuprum", sans-serif, Arial;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 135px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #63a63e;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    box-shadow: inset 0 -3px 0 0 rgba(54, 115, 21, 1);
+}
+
+.buy::before {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    font-size: 18px;
+    font-family: "symbols-technomart";
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    content: "\62";
+    color: #92c178
+}
+
+.buy:hover::before,
+.buy:active::before {
     color: #fff
+}
+
+.buy:hover {
+    background-color: #5fbb2d
+}
+
+.buy:active {
+    background-color: #518534;
+    box-shadow: none
+}
+
+.bookmark {
+    color: #32425c
+}
+
+.bookmark:active {
+    opacity: .3
+}
+
+.bookmark {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 129px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 5px;
+    border: solid 3px #63a63e
+}
+
+.bookmark:hover {
+    border-color: #32425c
+}
+
+.bookmark:active {
+    border-color: #32425c
+}
+
+.perf-up-text,
+.perf-down-text,
+.old-price,
+.new-price {
+    text-align: center;
+    margin: 0 auto
+}
+
+.perf-up-textб .perf-down-text {
+    font-family: "PT Sans", sans-serif, Arial;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000
+}
+
+.perf-down-text {
+    margin-bottom: 11.5px
+}
+
+.perf-down-text+.new-price {
+    margin-top: 37px
+}
+
+.old-price,
+.new-price {
+    font-family: "PT Sans", sans-serif, Arial;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #fff
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through
+}
+
+.old-price {
+    margin-bottom: 7.5px
+}
+
+.new-price {
+    position: relative;
+    width: 122px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: #ee3643;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px
+}
+
+.new-price::after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 19px 0 19px 20px;
+    border-color: transparent transparent transparent #ee3643;
+    content: ""
 }
