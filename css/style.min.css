@@ -1,12 +1,3 @@
-@charset "utf-8";
-@font-face {
-    font-family: "symbols-technomart";
-    src: url(../font/symbols-technomart.eot?22619757);
-    src: url(../font/symbols-technomart.eot?22619757#iefix) format("embedded-opentype"), url(../font/symbols-technomart.woff?22619757) format("woff"), url(../font/symbols-technomart.ttf?22619757) format("truetype"), url(../font/symbols-technomart.svg?22619757#symbols-technomart) format("svg");
-    font-weight: 400;
-    font-style: normal
-}
-
 body {
     min-width: 960px;
     margin: 0;
@@ -820,21 +811,15 @@ input[type="search"]:active~label::before {
 }
 
 .header-block-user::after {
+    content: "";
     position: absolute;
-    top: 12px;
-    right: 14px;
-    font-size: 20px;
-    font-family: "symbols-technomart";
-    font-style: normal;
-    font-weight: 400;
-    display: inline-block;
-    vertical-align: top;
-    text-decoration: inherit;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    content: "\241b";
-    color: #c5c5c5
+    top: 50%;
+    right: 15px;
+    width: 20px;
+    height: 18px;
+    margin-top: -9px;
+    background-image: url(../img/icon-logout.svg);
+    opacity: 0.3;
 }
 
 .header-block-user:hover::after,
@@ -1041,7 +1026,6 @@ input[type="search"]:active~label::before {
     top: -7px;
     left: 0;
     font-size: 30px;
-    font-family: "symbols-technomart";
     font-style: normal;
     font-weight: 400;
     display: inline-block;
@@ -1062,7 +1046,6 @@ input[type="search"]:active~label::before {
     top: -7px;
     left: 40px;
     font-size: 30px;
-    font-family: "symbols-technomart";
     font-style: normal;
     font-weight: 400;
     display: inline-block;
@@ -1194,7 +1177,6 @@ input[type="checkbox"]+label::before {
     top: 0;
     left: -35px;
     font-size: 30px;
-    font-family: "symbols-technomart";
     font-style: normal;
     font-weight: 400;
     display: inline-block;
@@ -2029,7 +2011,7 @@ textarea:focus,
     left: 15px;
     width: 17px;
     height: 17px;
-    background-image: url(../img/icon-logout.svg);
+    background-image: url(../img/icon-login.svg);
     opacity: 0.3;
     color: #000;
 }
@@ -2311,7 +2293,6 @@ textarea:focus,
     left: 24px;
     font-size: 40px;
     line-height: 40px;
-    font-family: "symbols-technomart";
     font-style: normal;
     font-weight: 400;
     display: inline-block;
@@ -2331,7 +2312,6 @@ textarea:focus,
     right: 24px;
     font-size: 40px;
     line-height: 40px;
-    font-family: "symbols-technomart";
     font-style: normal;
     font-weight: 400;
     display: inline-block;
