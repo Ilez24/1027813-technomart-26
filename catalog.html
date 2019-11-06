@@ -40,7 +40,7 @@
                     <a href="#" class="header-block-user">Равшан Джамшутович</a>
                     <div class="header-block-links">
                         <a href="#" class="header-links-element">Мои заказы</a>
-                        <a href="#" class="header-links-element">Мой кабинет</a>
+                        <a href="#" class="header-links-element">Личный кабинет</a>
                     </div>
                 </div>
             </div>
@@ -57,18 +57,19 @@
     </header>
     <main class="container">
         <ul class="breadcrumbs">
-            <li>
-                <a href="#" class="home"></a>
+            <li class="breadcrumbs-item">
+                <a href="index.html" title="На главную">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12">
+                    <g fill="#C1C6CE">
+                        <path d="M3 8v4h4V8h2v4h4V8L8 3.516z" />
+                        <path d="M14.831 6.365L13 4.751V0h-2v2.987L8.332.635c-.02-.017-.043-.023-.064-.037a.465.465 0 0 0-.08-.047.551.551 0 0 0-.095-.024C8.062.521 8.032.515 8 .515c-.031 0-.061.006-.092.012a.46.46 0 0 0-.095.025c-.028.011-.053.029-.08.046-.021.014-.045.02-.064.037l-6.498 5.73a.501.501 0 0 0 .33.875.497.497 0 0 0 .331-.125L8 1.677l6.169 5.438a.501.501 0 0 0 .662-.75z" />
+                    </g>
+                </svg>
+                </a>
             </li>
-            <li>
-                <a href="#">Каталог</a>
-            </li>
-            <li>
-                <a href="#">Инструменты</a>
-            </li>
-            <li>
-                <span>Перфораторы</span>
-            </li>
+            <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
+            <li class="breadcrumbs-item"><a href="#">Инструмент</a></li>
+            <li class="breadcrumbs-item"><a href="#">Перфораторы</a></li>
         </ul>
         <h1 class="catalog-title">Перфораторы</h1>
         <div class="catalog-container clearfix">
@@ -116,8 +117,22 @@
                         <a href="#" class="catalog-options-variant catalog-options-price catalog-options-active">По цене</a>
                         <a href="#" class="catalog-options-variant catalog-options-type">По типу</a>
                         <a href="#" class="catalog-options-variant catalog-options-functions">По функционалу</a>
-                        <a class="catalog-up-arrow catalog-options-active" href="#"></a>
-                        <a class="catalog-down-arrow" href="#"></a>
+                        <ul class="sort-arrow-list">
+                            <li>
+                                <a href="#" class="sort-arrow active" aria-label="Сортировка по возрастанию" title="Сортировка по возрастанию">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                      <path d="M5.5 0L0 10h11z" />
+                                  </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="sort-arrow" aria-label="Сортировка по убыванию" title="Сортировка по убыванию">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                      <path d="M5.5 10L0 0h11" />
+                                  </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="catalog-block">
